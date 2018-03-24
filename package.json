@@ -1,0 +1,26 @@
+{
+  "name": "form-error-reducer",
+  "version": "0.0.1",
+  "description": "Simple app for collecting nested errors",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maritzuhcom/form-error-reducer.git"
+  },
+  "author": "Maritza Mancillas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maritzuhcom/form-error-reducer/issues"
+  },
+  "homepage": "https://github.com/maritzuhcom/form-error-reducer#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.1.2",
+    "immutable": "^3.8.2",
+    "mocha": "^5.0.5"
+  }
+}

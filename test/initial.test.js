@@ -40,6 +40,26 @@ describe('Given examples', () => {
       expect(transformErrors(error).equals(transformed)).to.equal(true)
     });
 
+    it('Should handle variant of second given scenario', () => {
+      const error = fromJS({
+        name: {
+          first: ['Only alphanumeric characters are allowed'],
+          last: ['Only alpha characters are allowed'],
+        },
+        names: [{}, {
+          first: ['Only alphanumeric characters are allowed'],
+          last: ['Only alphanumeric characters are allowed'],
+        }, {}],
+      });
+
+      const transformed = fromJS({
+        name: 'Only alphanumeric characters are allowed. Only alpha characters are allowed.',
+        names: 'Only alphanumeric characters are allowed.',
+      });
+
+      expect(transformErrors(error).equals(transformed)).to.equal(true)
+    });
+
     it('Should handle custom scenario', () => {
       const error = fromJS({
         name: {
